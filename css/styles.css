@@ -1,0 +1,60 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 3px;
+  background-color: rgb(0, 8, 255);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 2000ms;
+}
+.btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(202, 29, 29);
+  margin-right: 10px;
+  transition: transform 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url(../img/I.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+}
+
+.btn::after {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  transition: transform 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateY(+170%);
+  background-color: rgb(29, 164, 20);
+  background-image: url(../img/Diana.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+}
+
+.btn:hover::after {
+  transform: translateY(-50%);
+}
+.btn:hover::before {
+  transform: translateY(-170%);
+}
+.btn:hover,
+.btn:focus {
+  color: black;
+  background-color: rgb(244, 254, 47);
+}
+a {
+  text-decoration: none;
+}
